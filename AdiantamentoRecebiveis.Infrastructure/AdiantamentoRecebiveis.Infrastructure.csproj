@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <Compile Remove="Migration\**" />
+    <Compile Remove="Querys\**" />
+    <EmbeddedResource Remove="Migration\**" />
+    <EmbeddedResource Remove="Querys\**" />
+    <None Remove="Migration\**" />
+    <None Remove="Querys\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdiantamentoRecebiveis.Domain\AdiantamentoRecebiveis.Domain.csproj" />
+  </ItemGroup>
+
+   <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="Npgsql" Version="8.0.3" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
